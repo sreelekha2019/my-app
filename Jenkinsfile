@@ -47,7 +47,7 @@ pipeline{
                                       nexusUrl: '172.31.15.174:8081',
                                       nexusVersion: 'nexus3', 
                                       protocol: 'http', repository: 'my-app', 
-                                      version: 0.0.12
+                                      version: '0.0.12'
                 }
             }
         }
