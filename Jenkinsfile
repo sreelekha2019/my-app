@@ -1,4 +1,4 @@
-@Library('javahome-libs') _
+@Library('jenkins-shared-libs') _
 
 pipeline{
     agent any
@@ -41,7 +41,7 @@ pipeline{
             steps{
                 script{
                     def pomFile = readMavenPom file: 'pom.xml'
-                    nexusArtifactUploader artifacts: [[artifactId: 'myweb', classifier: '', file: "target/myweb-${pomFile.version}.war", type: 'war']], 
+                    nexusArtifactUploader artifacts: [[artifactId: 'myweb', classifier: '', file: "target/myweb-0.0.12.war${pomFile.version}.war", type: 'war']], 
                                       credentialsId: 'nexus3', 
                                       groupId: 'in.javahome', 
                                       nexusUrl: '172.31.15.174:8081',
