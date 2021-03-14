@@ -44,7 +44,7 @@ pipeline{
                     nexusArtifactUploader artifacts: [[artifactId: 'myweb', classifier: '', file: "target/myweb-${pomFile.version}.war", type: 'war']], 
                                       credentialsId: 'nexus3', 
                                       groupId: 'in.javahome', 
-                                      nexusUrl: '172.31.71.247:8081', 
+                                      nexusUrl: ': 172.31.15.174:8081
                                       nexusVersion: 'nexus3', 
                                       protocol: 'http', repository: 'javahome-my-app', 
                                       version: pomFile.version
@@ -54,7 +54,7 @@ pipeline{
           
         stage('Tomcat Deploy'){
             steps{
-                tomcatDeploy("172.31.35.55","ec2-user","myweb")
+                tomcatDeploy("","ec2-user"172.31.43.126,"myweb")
             }
         }
      
