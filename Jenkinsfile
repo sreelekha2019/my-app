@@ -44,7 +44,7 @@ pipeline{
                     nexusArtifactUploader artifacts: [[artifactId: 'myweb', classifier: '', file: "target/myweb-${pomFile.version}.war", type: 'war']], 
                                       credentialsId: 'nexus3', 
                                       groupId: 'in.javahome', 
-                                      nexusUrl: ': 172.31.15.174:8081
+                                      nexusUrl: '172.31.15.174:8081',
                                       nexusVersion: 'nexus3', 
                                       protocol: 'http', repository: 'my-app', 
                                       version: 0.0.12
