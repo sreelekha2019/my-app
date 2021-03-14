@@ -54,7 +54,7 @@ pipeline{
           
         stage('Tomcat Deploy'){
             steps{
-                tomcatDeploy("","ec2-user"172.31.43.126,"myweb")
+                tomcatDeploy("ec2-user","172.31.43.126","myweb")
             }
         }
      
